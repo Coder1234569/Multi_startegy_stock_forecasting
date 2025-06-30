@@ -1,6 +1,6 @@
-# Nifty 50 Backtesting with Machine Learning
+# Multi-Strategy Stock Forecasting
 
-This repository contains the resources and code necessary to understand and implement a multi-strategy backtesting framework for Nifty 100 stocks using machine learning. The project includes a Jupyter notebook and supporting code to guide you through the concepts and practical implementation.
+This repository contains the resources and code necessary to understand and implement multiple strategies on Nifty 100 stocks using machine learning. The project includes a Jupyter notebook and supporting code to guide you through the concepts and practical implementation.
 
 ---
 
@@ -16,7 +16,7 @@ This repository contains the resources and code necessary to understand and impl
 
 ## Introduction
 
-This project is a comprehensive backtesting framework for evaluating and comparing multiple trading strategies on Nifty 100 stocks, including mean reversion, momentum, volatility-based,  proximity to support and dynamic sector rotation strategies. It leverages machine learning (Random Forest) to predict the optimal strategy for future periods, and evaluates performance using metrics such as CAGR, Sharpe ratio, Maximum Drawdown and Total Trades placed, with and without transaction costs.
+This project evaluates multiple trading strategies on Nifty 100 stocks, including mean reversion, momentum, volatility-based,  proximity to support and dynamic sector rotation strategies. It leverages machine learning (Random Forest) to predict the optimal strategy for every 30 trading day cycle, and evaluates performance using metrics such as CAGR, Sharpe ratio, Maximum Drawdown and Total Trades placed, with and without transaction costs.
 
 ---
 
@@ -53,20 +53,20 @@ To run the code in this project, you will need the following Python libraries:
 
 ## Results
 
-The results of the multi-strategy backtesting, are documented in the Jupyter notebook. Below is a summary of results on backtesting from 2019-2025.
+The results of all the strategies, are documented in the Jupyter notebook. Below is a summary of results on backtesting from 2019-2025 with transaction costs.
 
-| Strategy     | CAGR (With TC) | Sharpe Ratio | Max Drawdown | Total Trades |
-|--------------|----------------|--------------|--------------|--------------|
-| Strategy 1   | 17.91%         | 0.51         | -52.44%      | 463          |
-| Strategy 2   | 10.54%         | 0.27         | -42.28%      | 403          |
-| Strategy 3   | 19.28%         | 0.64         | -34.11%      | 525          |
-| Strategy 4   | 13.46%         | 0.45         | -26.78%      | 255          |
-| Strategy 5   | 11.30%         | 0.29         | -47.70%      | 406          |
-| Strategy rf  | 26.30%         | 0.77         | -33.71%      | 731          |
+| Strategy                      | CAGR (With TC) | Sharpe Ratio | Max Drawdown | Total Trades |
+|-------------------------------|----------------|--------------|--------------|--------------|
+| Relative Position Strategy    | 17.91%         | 0.51         | -52.44%      | 463          |
+| ROC Strategy                  | 10.54%         | 0.27         | -42.28%      | 403          |
+| Support Strategy              | 19.28%         | 0.64         | -34.11%      | 525          |
+| Volatility Strategy           | 13.46%         | 0.45         | -26.78%      | 255          |
+| Sector Roation Strategy       | 11.30%         | 0.29         | -47.70%      | 406          |
+| ML Selection Strategy         | 26.30%         | 0.77         | -33.71%      | 731          |
 
 ---
 
 **Note:**  
-CAGR, Sharpe ratio and Maximum Drawdown values are illustrative and may vary depending on the data period and parameters used.
+CAGR, Sharpe ratio, Maximum Drawdown and Total Trades placed values are illustrative and may vary depending on the parameters used.
 
 
